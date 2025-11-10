@@ -13,4 +13,4 @@ The goal is to practice SQL daily, build query-writing skills, and maintain a **
 - Stay consistent with daily SQL commits
 
 ---
-
+## Each file is independent and can be executed directly.
