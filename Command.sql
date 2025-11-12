@@ -11,3 +11,5 @@ USE my_new_db;
 
 -- 4. Drop (delete) a database named 'my_new_db'
 DROP DATABASE my_new_db;
+
+-- 5.
