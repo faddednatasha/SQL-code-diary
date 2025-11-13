@@ -35,3 +35,15 @@ SHOW COLUMNS FROM TableName;
 -- 10. SELECT FROM
 -- Retrieves all columns and rows from a table.
 SELECT * FROM TableName; 
+
+-- 11. DROP TABLE
+-- Permanently deletes a table, removing its structure and all data.
+DROP TABLE TableName;
+
+-- 12. INSERT INTO
+-- Specifies the table and columns to receive new data.
+INSERT INTO TableName (column1, column2); 
+
+-- 13. VALUES
+-- Provides the actual data records to be inserted by INSERT INTO.
+VALUES (value1, value2); 
