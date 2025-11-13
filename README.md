@@ -14,3 +14,4 @@ The goal is to practice SQL daily, build query-writing skills, and maintain a **
 
 ---
 ## Each file is independent and can be executed directly.
+![SQL](https://img.shields.io/badge/SQL-Queries-blue?style=flat-square)
