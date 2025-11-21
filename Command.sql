@@ -104,10 +104,22 @@ ORDER BY column_name;
 -- Specifies the sort order as ascending (ASC) or descending (DESC).
 ORDER BY column_name DESC;
 
-
 ---
--- PART 4: Operators 
+-- PART 4: Logical and Pattern Operators
+---
 
-AND 
-OR
-NOT
+-- 24. AND
+-- Combines two conditions; both must be TRUE for a record to be selected.
+SELECT * FROM TableName WHERE condition1 AND condition2;
+
+-- 25. OR
+-- Combines two conditions; at least one must be TRUE for a record to be selected.
+SELECT * FROM TableName WHERE condition1 OR condition2;
+
+-- 26. NOT
+-- Negates a condition, selecting records where the condition is FALSE.
+SELECT * FROM TableName WHERE NOT condition;
+
+-- 27. LIKE
+-- Used in the WHERE clause to search for a specified pattern in a column.
+SELECT * FROM TableName WHERE column_name LIKE 'pattern';
