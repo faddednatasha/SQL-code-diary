@@ -20,11 +20,6 @@ USE my_new_db;
 -- Permanently deletes a database.
 DROP DATABASE my_new_db;
 
-
-AND 
-OR
-NOT
-
 ---
 -- PART 2: Table Structure and Data Basics (DDL/DQL/DML)
 ---
@@ -109,3 +104,10 @@ ORDER BY column_name;
 -- Specifies the sort order as ascending (ASC) or descending (DESC).
 ORDER BY column_name DESC;
 
+
+---
+-- PART 4: Operators 
+
+AND 
+OR
+NOT
