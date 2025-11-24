@@ -123,3 +123,43 @@ SELECT * FROM TableName WHERE NOT condition;
 -- 27. LIKE
 -- Used in the WHERE clause to search for a specified pattern in a column.
 SELECT * FROM TableName WHERE column_name LIKE 'pattern';
+
+---
+-- PART 5: Data Modification
+---
+
+-- 28. UPDATE
+-- Modifies existing data records in a table.
+UPDATE TableName SET column = new_value WHERE condition;
+
+-- 29. UPDATE WARNING (Safety Note)
+-- Always use the WHERE clause with UPDATE to prevent changing every row in the table.
+-- DANGER: Missing WHERE clause changes ALL rows in the table!
+
+---
+-- PART 6: Limiting Results and Removing Records
+---
+
+-- 30. LIMIT
+-- Restricts the number of rows returned by a SELECT query.
+SELECT * FROM TableName LIMIT number_of_rows;
+
+-- 31. OFFSET
+-- Skips a specified number of rows before starting to return the results.
+SELECT * FROM TableName LIMIT count OFFSET skip_rows;
+
+-- 32. DELETE FROM
+-- Removes existing rows (records) from a table.
+DELETE FROM TableName WHERE condition;
+
+-- 33. DELETE WARNING (Safety Note)
+-- Always use the WHERE clause with DELETE to prevent removing every row in the table.
+-- DANGER: Missing WHERE clause removes ALL rows from the table!
+
+---
+-- PART 7: Aggregate Functions
+---
+
+-- 34. COUNT()
+-- Returns the number of rows that match a specified criterion or the total rows.
+SELECT COUNT(*) FROM TableName;
