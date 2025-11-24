@@ -168,3 +168,50 @@ SELECT COUNT(*) FROM TableName;
 -- Returns the average value of a numeric column (ignores NULL values).
 SELECT AVG(column_name) FROM TableName;
 
+---
+-- PART 8: LIKE Operator Wildcards
+---
+
+-- 36. LIKE Wildcard % (Starts With)
+-- Match strings that start with 'a'.
+WHERE column_name LIKE 'a%';
+
+-- 37. LIKE Wildcard % (Ends With)
+-- Match strings that end with 'a'.
+WHERE column_name LIKE '%a';
+
+-- 38. LIKE Wildcard % (Start/End Filter)
+-- Match strings that start with 'a' and end with 't'.
+WHERE column_name LIKE 'a%t';
+
+-- 39. LIKE Wildcard % (Substring)
+-- Match strings that contain the substring 'wow' in them at any position.
+WHERE column_name LIKE '%wow%';
+
+-- 40. LIKE Wildcard _ (Specific Position)
+-- Match strings that contain the substring 'wow' in them at the second position (i.e., character at position 1 is anything).
+WHERE column_name LIKE '_wow%';
+
+-- 41. LIKE Wildcard _ (Specific Character Position)
+-- Match strings that contain 'a' at the second position.
+WHERE column_name LIKE '_a%';
+
+-- 42. LIKE Wildcard _ (Minimum Length)
+-- Match strings that start with 'a' and contain at least 2 more characters (minimum length is 3).
+WHERE column_name LIKE 'a__%';
+
+---
+-- PART 9: Filtering Operators
+---
+
+-- 43. IN
+-- Used in the WHERE clause to specify multiple possible values for a column.
+SELECT * FROM TableName WHERE column_name IN ('value1', 'value2');
+
+-- 44. BETWEEN
+-- Used in the WHERE clause to select values within a specified inclusive range.
+SELECT * FROM TableName WHERE column_name BETWEEN start_value AND end_value;
+
+-- 45. NOT BETWEEN
+-- Used in the WHERE clause to select values outside a specified inclusive range.
+SELECT * FROM TableName WHERE column_name NOT BETWEEN start_value AND end_value;
