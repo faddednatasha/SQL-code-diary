@@ -163,3 +163,8 @@ DELETE FROM TableName WHERE condition;
 -- 34. COUNT()
 -- Returns the number of rows that match a specified criterion or the total rows.
 SELECT COUNT(*) FROM TableName;
+
+-- 35. AVG()
+-- Returns the average value of a numeric column (ignores NULL values).
+SELECT AVG(column_name) FROM TableName;
+
