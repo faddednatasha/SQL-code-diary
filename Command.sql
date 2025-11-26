@@ -215,3 +215,44 @@ SELECT * FROM TableName WHERE column_name BETWEEN start_value AND end_value;
 -- 45. NOT BETWEEN
 -- Used in the WHERE clause to select values outside a specified inclusive range.
 SELECT * FROM TableName WHERE column_name NOT BETWEEN start_value AND end_value;
+
+---
+-- PART 10: Key Constraints
+---
+
+-- 46. PRIMARY KEY
+-- A constraint that uniquely identifies each record in a table and enforces NOT NULL.
+column_name DATATYPE PRIMARY KEY;
+
+-- 47. AUTO_INCREMENT / IDENTITY
+-- Automatically generates a unique, sequential number for the key column on insertion.
+column_name INT PRIMARY KEY AUTO_INCREMENT;
+-- Note: 'IDENTITY(1,1)' is used in SQL Server. 'AUTO_INCREMENT' is common in MySQL.
+
+---
+-- PART 11: String Functions
+---
+
+-- 48. CONCAT
+-- Joins two or more strings together to form a single string.
+SELECT CONCAT(string1, ' ', string2);
+
+-- 49. SUBSTRING / SUBSTR
+-- Extracts a substring of a specified length from a string starting at a given position.
+SELECT SUBSTRING(string, start_position, length);
+
+-- 50. REVERSE
+-- Returns the string with the order of the characters reversed.
+SELECT REVERSE(string);
+
+-- 51. UPPER / UCASE
+-- Converts all characters in a string to uppercase.
+SELECT UPPER(string);
+
+-- 52. LOWER / LCASE
+-- Converts all characters in a string to lowercase.
+SELECT LOWER(string);
+
+-- 53. TRIM
+-- Removes leading and trailing spaces (or specified characters) from a string.
+SELECT TRIM(string);
