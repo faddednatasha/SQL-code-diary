@@ -261,3 +261,15 @@ SELECT TRIM(string);
 -- Replaces a portion of a string with a new substring.
 SELECT INSERT(string, start_position, length_to_replace, new_string);
 
+--
+-- PART 12: Integrity Constraints
+---
+
+-- 55. UNIQUE
+-- A constraint ensuring all values in a column are different (no duplicates allowed).
+column_name DATATYPE UNIQUE;
+
+-- 56. CHECK
+-- A constraint used to limit the range of values that can be placed in a column.
+column_name DATATYPE CHECK (condition);
+-- Example: 'Age INT CHECK (Age >= 18)'
