@@ -273,3 +273,31 @@ column_name DATATYPE UNIQUE;
 -- A constraint used to limit the range of values that can be placed in a column.
 column_name DATATYPE CHECK (condition);
 -- Example: 'Age INT CHECK (Age >= 18)'
+
+---
+-- PART 13: Altering Table Structure (DDL)
+---
+
+-- 57. ALTER TABLE
+-- The main command used to add, modify, or drop columns/constraints in an existing table.
+ALTER TABLE TableName action;
+
+-- 58. RENAME (Table)
+-- Renames an existing table (syntax varies by system, e.g., MySQL uses RENAME TO).
+ALTER TABLE OldTableName RENAME TO NewTableName;
+
+-- 59. ALTER ADD COLUMN
+-- Adds a new column to the existing table structure.
+ALTER TABLE TableName ADD NewColumn DATATYPE;
+
+-- 60. ALTER MODIFY COLUMN (Data Type/Constraint)
+-- Changes the data type or constraints (NOT NULL, DEFAULT) of an existing column.
+ALTER TABLE TableName MODIFY COLUMN Column_Name NewDataType NewConstraint;
+
+-- 61. ALTER DROP COLUMN
+-- Permanently deletes a column from the table and removes all data in that column.
+ALTER TABLE TableName DROP COLUMN Column_Name;
+
+-- 62. ALTER CHANGE COLUMN (Rename and/or Redefine)
+-- Changes the name and/or the data type/constraints of an existing column (MySQL syntax).
+ALTER TABLE TableName CHANGE COLUMN OldColumnName NewColumnName NewDataType;
