@@ -256,3 +256,8 @@ SELECT LOWER(string);
 -- 53. TRIM
 -- Removes leading and trailing spaces (or specified characters) from a string.
 SELECT TRIM(string);
+
+-- 54. INSERT (String Function)
+-- Replaces a portion of a string with a new substring.
+SELECT INSERT(string, start_position, length_to_replace, new_string);
+
