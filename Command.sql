@@ -301,3 +301,25 @@ ALTER TABLE TableName DROP COLUMN Column_Name;
 -- 62. ALTER CHANGE COLUMN (Rename and/or Redefine)
 -- Changes the name and/or the data type/constraints of an existing column (MySQL syntax).
 ALTER TABLE TableName CHANGE COLUMN OldColumnName NewColumnName NewDataType;
+
+---
+-- PART 14: Foreign Keys and Relationships (DDL)
+---
+
+-- 63. FOREIGN KEY (Inline)
+-- Defines a relationship where a column references the PRIMARY KEY of another table.
+FOREIGN KEY (column_name) REFERENCES ParentTable(ParentPrimaryKey);
+
+-- 64. FOREIGN KEY (Separate Constraint Definition)
+-- Defines the foreign key after defining all columns, allowing custom constraint naming.
+CONSTRAINT fk_name FOREIGN KEY (column_name) REFERENCES ParentTable(ParentPrimaryKey);
+
+-- 65. ALTER ADD FOREIGN KEY (Post-Creation)
+-- Adds a foreign key to an existing table using the ALTER TABLE command.
+ALTER TABLE ChildTable ADD FOREIGN KEY (column_name) REFERENCES ParentTable(ParentPrimaryKey);
+
+-- 66. Relationship (Concept)
+-- The logical connection between tables, enforced by the FOREIGN KEY.
+-- It ensures data integrity (e.g., you can't insert an order for a customer who doesn't exist).
+
+
